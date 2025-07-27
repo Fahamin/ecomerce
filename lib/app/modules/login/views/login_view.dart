@@ -21,7 +21,10 @@ class LoginView extends GetView<LoginController> {
         child: ConstrainedBox(
           constraints: BoxConstraints(
             minHeight:
-                MediaQuery.of(context).size.height - 32, // 32 = 16*2 padding
+            MediaQuery
+                .of(context)
+                .size
+                .height - 32, // 32 = 16*2 padding
           ),
           child: Center(
             child: Column(
@@ -56,15 +59,17 @@ class LoginView extends GetView<LoginController> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Obx(
-                              () => Row(
-                                children: [
-                                  Checkbox(
-                                    value: controller.rememberMe.value,
-                                    onChanged: controller.toggleRememberMe,
+                                  () =>
+                                  Row(
+                                    children: [
+                                      Checkbox(
+                                        value: controller.rememberMe.value,
+                                        onChanged: controller.toggleRememberMe,
+                                      ),
+                                      textNormal(
+                                          "Remember Me", Colors.blue, 12.0),
+                                    ],
                                   ),
-                                  textNormal("Remember Me", Colors.blue, 12.0),
-                                ],
-                              ),
                             ),
                             TextButton(
                               onPressed: () {},
@@ -81,15 +86,31 @@ class LoginView extends GetView<LoginController> {
                           return controller.isLoading.value
                               ? CircularProgressIndicator()
                               : CustomButton(
-                                  "Login",
-                                  onPressed: () {
-                                    //  controller.login();
-                                    Get.toNamed(Routes.HOME);
-                                  },
-                                );
+                            "Login",
+                            onPressed: () {
+                              //  controller.login();
+                              Get.toNamed(Routes.HOME);
+                            },
+                          );
                         }),
-                        spaceHeight(15.0),
-
+                        spaceHeight(25.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            Container(
+                              width: 100,
+                              height: 1, // adjust height as needed
+                              color: Colors.grey,
+                            ),
+                            textNormal("or Sing in with", Colors.grey, 10.0),
+                            Container(
+                              width: 100,
+                              height: 1, // adjust height as needed
+                              color: Colors.grey,
+                            ),
+                          ],
+                        ),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -98,17 +119,17 @@ class LoginView extends GetView<LoginController> {
                               return controller.isLoading.value
                                   ? CircularProgressIndicator()
                                   : InkWell(
-                                      onTap: () {
-                                        controller.signInWithGoogle();
-                                      },
-                                      child: SizedBox(
-                                        width: 40,
-                                        height: 40,
-                                        child: Image.asset(
-                                          "assets/image/gg.png",
-                                        ),
-                                      ),
-                                    );
+                                onTap: () {
+                                  controller.signInWithGoogle();
+                                },
+                                child: SizedBox(
+                                  width: 40,
+                                  height: 40,
+                                  child: Image.asset(
+                                    "assets/image/gg.png",
+                                  ),
+                                ),
+                              );
                             }),
 
                             InkWell(
