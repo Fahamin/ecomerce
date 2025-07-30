@@ -12,15 +12,15 @@ class MainScreenView extends GetView<MainScreenController> {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = isDarkMode(context);
+    final isDark =HkHelperFunctions. isDarkMode(context);
     return Scaffold(
       bottomNavigationBar: Obx(
             ()=> NavigationBar(
           elevation: 0,
           selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (value) => controller.selectedIndex.value = value,
-          backgroundColor: isDark ? dark : light,
-          indicatorColor: isDark ? light.withOpacity(0.1) : dark.withOpacity(0.1),
+          backgroundColor: isDark ?HkColors. dark :HkColors. light,
+          indicatorColor: isDark ?HkColors. light.withOpacity(0.1) :HkColors. dark.withOpacity(0.1),
           destinations: const [
             NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
             NavigationDestination(icon: Icon(Icons.shop), label: 'Store'),

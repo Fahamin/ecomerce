@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,7 +20,7 @@ class HkShimmerEffect extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = isDarkMode(context);
+    final dark = HkHelperFunctions.isDarkMode(context);
     return Shimmer.fromColors(
       baseColor: dark ? Colors.grey[850]! : Colors.grey[300]!,
       highlightColor: dark ? Colors.grey[700]! : Colors.grey[100]!,
@@ -29,8 +28,8 @@ class HkShimmerEffect extends StatelessWidget {
         width: width,
         height: height,
         decoration: BoxDecoration(
-            color: color ?? (dark ? darkerGrey : white),
-            borderRadius: BorderRadius.circular(radius)
+          color: color ?? (dark ? HkColors.darkerGrey : HkColors.white),
+          borderRadius: BorderRadius.circular(radius),
         ),
       ),
     );

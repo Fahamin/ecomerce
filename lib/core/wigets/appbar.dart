@@ -5,14 +5,14 @@ import '../utils/colors.dart';
 import '../utils/helper_function.dart';
 import '../utils/size.dart';
 
-class HAppBar extends StatelessWidget implements PreferredSizeWidget {
+class HkAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? title;
   final bool showBackArrow;
   final IconData? leadingIcon;
   final List<Widget>? actions;
   final VoidCallback? leadingOnPressed;
 
-  const HAppBar({
+  const HkAppBar({
     super.key,
     this.title,
     this.showBackArrow = false,
@@ -23,23 +23,24 @@ class HAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    var isDark = isDarkMode(context);
+    final dark = HkHelperFunctions.isDarkMode(context);
 
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: HkSizes.md),
+      padding: const EdgeInsets.all(8.0),
       child: AppBar(
         automaticallyImplyLeading: false,
         leading: showBackArrow
             ? IconButton(
                 onPressed: () => Get.back(),
                 icon: const Icon(Icons.arrow_back),
-                color: isDark ? white : dark,
+                color: dark ? Colors.white : Colors.black,
               )
             : leadingIcon != null
             ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon))
             : null,
 
         title: title,
+
         actions: actions,
       ),
     );

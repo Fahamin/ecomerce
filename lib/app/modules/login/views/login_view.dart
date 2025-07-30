@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../core/utils/colors.dart';
-import '../../../../core/text_utils.dart';
+import '../../../../core/utils/text_utils.dart';
 import '../../../../core/wigets/custom_button.dart';
 import '../../../../core/wigets/email_text_filed.dart';
 import '../../../../core/wigets/password_text_filed.dart';

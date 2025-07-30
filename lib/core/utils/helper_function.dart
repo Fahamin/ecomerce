@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:intl/intl.dart';
 
 import 'colors.dart';
 
-
-
-
-   Color? getColor(String value) {
+class HkHelperFunctions {
+  static Color? getColor(String value) {
     /// Define your product specific colors here and it will match the attribute colors and show specific 🟠🟡🟢🔵🟣🟤
 
     if (value == 'Green') {
@@ -43,32 +42,32 @@ import 'colors.dart';
     }
   }
 
-   customToast({required message}){
+  static customToast({required message}){
     ScaffoldMessenger.of(Get.context!).showSnackBar(
-      SnackBar(
-        elevation: 0,
-        duration: const Duration(seconds: 3),
-        backgroundColor: Colors.transparent,
-        content: Container(
-          padding: const EdgeInsets.all(12.0),
-          margin: const EdgeInsets.symmetric(horizontal: 30.0),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(30),
-            color:isDarkMode(Get.context!) ? darkerGrey.withOpacity(0.9) : grey.withOpacity(0.9)
+        SnackBar(
+          elevation: 0,
+          duration: const Duration(seconds: 3),
+          backgroundColor: Colors.transparent,
+          content: Container(
+            padding: const EdgeInsets.all(12.0),
+            margin: const EdgeInsets.symmetric(horizontal: 30.0),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                color: HkHelperFunctions.isDarkMode(Get.context!) ? HkColors.darkerGrey.withOpacity(0.9) : HkColors.grey.withOpacity(0.9)
+            ),
+            child: Center(child: Text(message,style: Theme.of(Get.context!).textTheme.labelLarge,),),
           ),
-          child: Center(child: Text(message,style: Theme.of(Get.context!).textTheme.labelLarge,),),
-        ),
-      )
+        )
     );
   }
 
-   void showSnackBar(String message) {
+  static void showSnackBar(String message) {
     ScaffoldMessenger.of(Get.context!).showSnackBar(
       SnackBar(content: Text(message)),
     );
   }
 
-   void showAlert(String title, String message) {
+  static void showAlert(String title, String message) {
     showDialog(
       context: Get.context!,
       builder: (BuildContext context) {
@@ -86,59 +85,59 @@ import 'colors.dart';
     );
   }
 
-   warningSnackBar({required title, message = ''}){
+  static warningSnackBar({required title, message = ''}){
     Get.snackbar(
         title,
         message,
         isDismissible: true,
         shouldIconPulse: true,
-        colorText: white,
+        colorText: HkColors.white,
         backgroundColor: Colors.orange,
         snackPosition: SnackPosition.BOTTOM,
         duration: const Duration(seconds: 3),
         margin: const EdgeInsets.all(20),
-        icon: const Icon(Icons.warning,color: white,)
+        icon: const Icon(Icons.warning,color: HkColors.white,)
     );
   }
 
-   successSnackBar({required title, message = '', duration = 3}){
+  static successSnackBar({required title, message = '', duration = 3}){
     Get.snackbar(
         title,
         message,
-      isDismissible: true,
-      shouldIconPulse: true,
-      colorText: white,
-      backgroundColor: primary,
-      snackPosition: SnackPosition.BOTTOM,
-      duration: Duration(seconds: duration),
-      margin: const EdgeInsets.all(10),
-      icon: const Icon(Icons.check,color: white,)
+        isDismissible: true,
+        shouldIconPulse: true,
+        colorText: HkColors.white,
+        backgroundColor: HkColors.primary,
+        snackPosition: SnackPosition.BOTTOM,
+        duration: Duration(seconds: duration),
+        margin: const EdgeInsets.all(10),
+        icon: const Icon(Icons.check,color: HkColors.white,)
     );
   }
 
-   errorSnackBar({required title, message = ''}){
+  static errorSnackBar({required title, message = ''}){
     Get.snackbar(
         title,
         message,
-      isDismissible: true,
-      shouldIconPulse: true,
-      colorText: white,
-      backgroundColor: Colors.red.shade600,
-      snackPosition: SnackPosition.BOTTOM,
-      duration: const Duration(seconds: 3),
-      margin: const EdgeInsets.all(20),
-      icon: const Icon(Icons.warning, color: white,)
+        isDismissible: true,
+        shouldIconPulse: true,
+        colorText: HkColors.white,
+        backgroundColor: Colors.red.shade600,
+        snackPosition: SnackPosition.BOTTOM,
+        duration: const Duration(seconds: 3),
+        margin: const EdgeInsets.all(20),
+        icon: const Icon(Icons.warning, color: HkColors.white,)
     );
   }
 
-   void navigateToScreen(BuildContext context, Widget screen) {
+  static void navigateToScreen(BuildContext context, Widget screen) {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (_) => screen),
     );
   }
 
-   String truncateText(String text, int maxLength) {
+  static String truncateText(String text, int maxLength) {
     if (text.length <= maxLength) {
       return text;
     } else {
@@ -146,31 +145,31 @@ import 'colors.dart';
     }
   }
 
-   bool isDarkMode(BuildContext context) {
+  static bool isDarkMode(BuildContext context) {
     return Theme.of(context).brightness == Brightness.dark;
   }
 
-   Size screenSize() {
+  static Size screenSize() {
     return MediaQuery.of(Get.context!).size;
   }
 
-   double screenHeight() {
+  static double screenHeight() {
     return MediaQuery.of(Get.context!).size.height;
   }
 
-   double screenWidth() {
+  static double screenWidth() {
     return MediaQuery.of(Get.context!).size.width;
   }
 
-   String getFormattedDate(DateTime date, {String format = 'dd MMM yyyy'}) {
+  static String getFormattedDate(DateTime date, {String format = 'dd MMM yyyy'}) {
     return DateFormat(format).format(date);
   }
 
-   List<T> removeDuplicates<T>(List<T> list) {
+  static List<T> removeDuplicates<T>(List<T> list) {
     return list.toSet().toList();
   }
 
-   List<Widget> wrapWidgets(List<Widget> widgets, int rowSize) {
+  static List<Widget> wrapWidgets(List<Widget> widgets, int rowSize) {
     final wrappedList = <Widget>[];
     for (var i = 0; i < widgets.length; i += rowSize) {
       final rowChildren = widgets.sublist(i, i + rowSize > widgets.length ? widgets.length : i + rowSize);
@@ -178,4 +177,4 @@ import 'colors.dart';
     }
     return wrappedList;
   }
-
+}

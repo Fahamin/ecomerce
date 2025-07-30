@@ -8,7 +8,7 @@ class CircleShape extends StatelessWidget {
     this.height = 400,
     this.radius = 400,
     this.padding = 0,
-    this.background = cardbg,
+    this.background = HkColors.primary,
   });
 
   final double width;

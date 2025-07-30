@@ -19,7 +19,7 @@ class PrimaryHeaderContainer extends StatelessWidget {
         ClipPath(
           clipper: BottomCurveClipper(),
           child: Container(
-            color: primary,
+            color: HkColors.primary,
             child: SizedBox(
               height: 400,
               child: Stack(
