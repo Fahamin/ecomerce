@@ -1,5 +1,6 @@
 import 'package:ecomerce/app/modules/home/views/wigets/home_appbar.dart';
 import 'package:ecomerce/core/utils/device/device_utility.dart';
+import 'package:ecomerce/core/utils/helper_function.dart';
 import 'package:ecomerce/core/utils/size.dart';
 import 'package:ecomerce/core/utils/text_utils.dart';
 import 'package:ecomerce/core/wigets/appbar.dart';
@@ -8,7 +9,9 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../../core/common/HSectionHeading.dart';
 import '../../../../core/common/chart_menu_icon.dart';
+import '../../../../core/common/custom_searchbar.dart';
 import '../../../../core/utils/colors.dart';
 import '../../../../core/common/primary_header_container.dart';
 import '../../../../core/wigets/bottomcurbe.dart';
@@ -27,24 +30,34 @@ class HomeView extends GetView<HomeController> {
               child: Column(
                 children: [
                   home_appbar(),
+                  HSearchBar(value: "Search in Store"),
                   Padding(
-                    padding: const EdgeInsets.all(HkSizes.defaultSpace),
-                    child: Container(
-                      width: HkDeviceUtils.getScreenHeight(),
-                      padding: EdgeInsets.all(HkSizes.md),
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(HkSizes.cardRadiusLg),
-                        border: Border.all(color: HkColors.grey)
-                      ),
-                      child: Row(
-                        children: [
-                          Icon(Icons.search,
-                          color:HkColors. black,),
-                          spaceWidth(14.0),
-                          textNormal("Search in Store", HkColors.black, 15.0)
-                        ],
-                      ),
+                    padding: EdgeInsets.only(left: HkSizes.defaultSpace),
+                    child: Hsectionheading(title: "Populars Categories"),
+                  ),
+                  SizedBox(
+                    height: 80,
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: 7,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (_, index) {
+                        return Column(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(100),
+                                color: HkColors.white,
+                              ),
+                              child: Center(
+                                child: Image(
+                                  image: AssetImage(),
+                                ),
+                              ),
+                            ),
+                          ],
+                        );
+                      },
                     ),
                   ),
                 ],
