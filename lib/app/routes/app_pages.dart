@@ -14,6 +14,8 @@ import '../modules/setting/bindings/setting_binding.dart';
 import '../modules/setting/views/setting_view.dart';
 import '../modules/store/bindings/store_binding.dart';
 import '../modules/store/views/store_view.dart';
+import '../modules/subcategori/bindings/subcategori_binding.dart';
+import '../modules/subcategori/views/subcategori_view.dart';
 
 part 'app_routes.dart';
 
@@ -28,35 +30,36 @@ class AppPages {
       page: () => LoginView(),
       binding: LoginBinding(),
     ),
-    GetPage(
-      name: _Paths.HOME,
-      page: () => HomeView(),
-      binding: HomeBinding(),
-    ),
+    GetPage(name: _Paths.HOME, page: () => HomeView(), binding: HomeBinding()),
     GetPage(
       name: _Paths.MAIN_SCREEN,
-      page: () => const MainScreenView(),
+      page: () => MainScreenView(),
       binding: MainScreenBinding(),
     ),
     GetPage(
       name: _Paths.STORE,
-      page: () => const StoreView(),
+      page: () => StoreView(),
       binding: StoreBinding(),
     ),
     GetPage(
       name: _Paths.FAVOURITE,
-      page: () => const FavouriteView(),
+      page: () => FavouriteView(),
       binding: FavouriteBinding(),
     ),
     GetPage(
       name: _Paths.SETTING,
-      page: () => const SettingView(),
+      page: () => SettingView(),
       binding: SettingBinding(),
     ),
     GetPage(
       name: _Paths.CATEGORIES,
-      page: () => const CategoriesView(),
+      page: () => CategoriesView(),
       binding: CategoriesBinding(),
+    ),
+    GetPage(
+      name: _Paths.SUBCATEGORI,
+      page: () => SubcategoriView(),
+      binding: SubcategoriBinding(),
     ),
   ];
 }

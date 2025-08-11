@@ -4,9 +4,10 @@ import 'package:get/get.dart';
 
 import '../../../../core/utils/colors.dart';
 import '../../../../core/utils/text_utils.dart';
-import '../../../../core/wigets/custom_button.dart';
-import '../../../../core/wigets/email_text_filed.dart';
-import '../../../../core/wigets/password_text_filed.dart';
+
+import '../../../../core/widgets/custom_button.dart';
+import '../../../../core/widgets/email_text_filed.dart';
+import '../../../../core/widgets/password_text_filed.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/login_controller.dart';
 
@@ -126,7 +127,7 @@ class LoginView extends GetView<LoginController> {
                                   width: 40,
                                   height: 40,
                                   child: Image.asset(
-                                    "assets/image/gg.png",
+                                    "assets/images/gg.png",
                                   ),
                                 ),
                               );
@@ -139,7 +140,7 @@ class LoginView extends GetView<LoginController> {
                                 height: 40,
                                 child: Padding(
                                   padding: EdgeInsets.all(8.0),
-                                  child: Image.asset("assets/image/fb.png"),
+                                  child: Image.asset("assets/images/fb.png"),
                                 ),
                               ),
                             ),

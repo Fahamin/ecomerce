@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
-import '../../../data/services/google_auth_service.dart';
+import '../../../../data/remote/google_auth_service.dart';
 import '../../../routes/app_pages.dart';
 import 'package:http/http.dart' as http;
 

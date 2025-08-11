@@ -3,8 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../utils/colors.dart';
-import '../wigets/bottomcurbe.dart';
-import '../wigets/circle_shape.dart';
+import '../widgets/bottomcurbe.dart';
+import '../widgets/circle_shape.dart';
+
 
 class PrimaryHeaderContainer extends StatelessWidget {
   const PrimaryHeaderContainer({

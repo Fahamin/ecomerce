@@ -10,6 +10,7 @@ class CategoriesController extends GetxController {
   var errorMessage = ''.obs;
   var categories = <String>[].obs;
 
+  @override
   onInit() {
     super.onInit();
     getCategories();

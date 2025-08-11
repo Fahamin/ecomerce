@@ -10,6 +10,7 @@ abstract class Routes {
   static const FAVOURITE = _Paths.FAVOURITE;
   static const SETTING = _Paths.SETTING;
   static const CATEGORIES = _Paths.CATEGORIES;
+  static const SUBCATEGORI = _Paths.SUBCATEGORI;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const FAVOURITE = '/favourite';
   static const SETTING = '/setting';
   static const CATEGORIES = '/categories';
+  static const SUBCATEGORI = '/subcategori';
 }
