@@ -1,10 +1,10 @@
 import 'package:ecomerce/app/modules/subcategori/views/subcategori_view.dart';
 import 'package:ecomerce/core/common/shimmer/simmer_category.dart';
-import 'package:ecomerce/core/utils/image_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../../../core/common/vertical_image_text.dart';
+import '../../../../../core/utils/constants/image_strings.dart';
 import '../../../../../core/widgets/simmer_effect.dart';
 import '../../../../routes/app_pages.dart';
 import '../../../categories/controllers/categories_controller.dart';

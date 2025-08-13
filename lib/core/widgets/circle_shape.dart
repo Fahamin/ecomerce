@@ -1,4 +1,4 @@
-import 'package:ecomerce/core/utils/colors.dart';
+import 'package:ecomerce/core/utils/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 
 class CircleShape extends StatelessWidget {

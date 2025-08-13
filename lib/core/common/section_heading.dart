@@ -1,5 +1,5 @@
-import 'package:ecomerce/core/utils/colors.dart';
-import 'package:ecomerce/core/utils/size.dart';
+import 'package:ecomerce/core/utils/constants/colors.dart';
+import 'package:ecomerce/core/utils/constants/size.dart';
 import 'package:ecomerce/core/utils/text_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

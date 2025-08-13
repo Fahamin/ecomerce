@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/colors.dart';
+import '../utils/constants/colors.dart';
 import '../utils/device/device_utility.dart';
 import '../utils/helper_function.dart';
-import '../utils/size.dart';
+import '../utils/constants/size.dart';
 import '../utils/text_utils.dart';
 
 class HSearchBar extends StatelessWidget {

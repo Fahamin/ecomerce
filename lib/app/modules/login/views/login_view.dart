@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
-import '../../../../core/utils/colors.dart';
+import '../../../../core/utils/constants/colors.dart';
 import '../../../../core/utils/text_utils.dart';
 
 import '../../../../core/widgets/custom_button.dart';

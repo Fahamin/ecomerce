@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../utils/colors.dart';
+import '../../../utils/constants/colors.dart';
 
 class HkCircularContainer extends StatelessWidget {
   final double? width;

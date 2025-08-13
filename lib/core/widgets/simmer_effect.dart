@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../utils/colors.dart';
+import '../utils/constants/colors.dart';
 import '../utils/helper_function.dart';
 
 class HkShimmerEffect extends StatelessWidget {

@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../utils/colors.dart';
+import '../../utils/constants/colors.dart';
 import '../../utils/helper_function.dart';
-import '../../utils/size.dart';
+import '../../utils/constants/size.dart';
 import '../../widgets/simmer_effect.dart';
 
 

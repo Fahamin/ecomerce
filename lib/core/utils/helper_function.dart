@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:intl/intl.dart';
 
-import 'colors.dart';
+import 'constants/colors.dart';
 
 class HkHelperFunctions {
   static Color? getColor(String value) {

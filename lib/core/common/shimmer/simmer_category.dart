@@ -1,4 +1,4 @@
-import 'package:ecomerce/core/utils/size.dart';
+import 'package:ecomerce/core/utils/constants/size.dart';
 import 'package:ecomerce/core/widgets/simmer_effect.dart';
 import 'package:flutter/cupertino.dart';
 

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class HkColors {
  // App theme colors
  //static const Color primary = Color(0xFF4b68ff);
- static const Color primary = Color(0xFF37a6bf);
+ static const Color primary = Color(0xFF0857A0);
  static const Color secondary = Color(0xFFFFE24B);
  static const Color accent = Color(0xFFb0c7ff);
 
@@ -46,6 +46,8 @@ class HkColors {
  static const Color softGrey = Color(0xFFF4F4F4);
  static const Color lightGrey = Color(0xFFF9F9F9);
  static const Color white = Color(0xFFFFFFFF);
+ static const Color productVerticalBg = Color(0x0857A01A);
+
 
 }
 

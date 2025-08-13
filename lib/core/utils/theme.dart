@@ -6,7 +6,7 @@ import 'appbar_theme.dart';
 import 'bottom_sheet_theme.dart';
 import 'checkbox_theme.dart';
 import 'chip_theme.dart';
-import 'colors.dart';
+import 'constants/colors.dart';
 import 'elevated_button_theme.dart';
 import 'outlined_button_theme.dart';
 

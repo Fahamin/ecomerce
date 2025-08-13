@@ -1,7 +1,7 @@
-import 'package:ecomerce/core/utils/size.dart';
+import 'package:ecomerce/core/utils/constants/size.dart';
 import 'package:flutter/material.dart';
 
-import 'colors.dart';
+import 'constants/colors.dart';
 
 
 /// Custom Class for Light & Dark Text Themes

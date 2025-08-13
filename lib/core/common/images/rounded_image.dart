@@ -1,6 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import '../../utils/size.dart';
+import '../../utils/constants/size.dart';
 import '../../widgets/simmer_effect.dart';
 
 class HkRoundedImage extends StatelessWidget {
@@ -51,7 +51,7 @@ class HkRoundedImage extends StatelessWidget {
                     errorWidget: (context, url, error) => const Icon(Icons.error),
                   )
                 : Image(
-                    image: AssetImage(imageUrl) as ImageProvider,
+                    image: AssetImage(imageUrl) ,
                     fit: fit,
                   )),
       ),

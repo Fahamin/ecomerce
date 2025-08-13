@@ -17,8 +17,8 @@ class home_appbar extends StatelessWidget {
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          textNormal("value", Colors.grey, 16.0),
-          textNormal("sublitle", Colors.white, 18.0),
+          textNormal("Good Morning", Colors.white, 16.0),
+          textNormal("Mr.Rasel Mia", Colors.white, 18.0),
         ],
       ),
       actions: [

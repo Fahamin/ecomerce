@@ -1,13 +1,12 @@
 
 
-import 'package:ecomerce/core/common/circular_container.dart';
 import 'package:ecomerce/core/common/images/circular_image.dart';
 import 'package:flutter/material.dart';
 
 import '../../app/modules/home/views/home_view.dart';
-import '../utils/colors.dart';
+import '../utils/constants/colors.dart';
 import '../utils/helper_function.dart';
-import '../utils/size.dart';
+import '../utils/constants/size.dart';
 
 class HkVerticalImageText extends StatelessWidget {
   const HkVerticalImageText({

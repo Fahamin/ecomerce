@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../utils/colors.dart';
+import '../utils/constants/colors.dart';
 import '../utils/helper_function.dart';
-import '../utils/size.dart';
+import '../utils/constants/size.dart';
 
 class HkAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? title;
